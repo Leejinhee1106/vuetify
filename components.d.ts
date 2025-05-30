@@ -8,11 +8,18 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Button: typeof import('./src/components/Button.vue')['default']
+    Expan: typeof import('./src/components/Expan.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Layout1: typeof import('./src/components/layout/Layout1.vue')['default']
     Layout2: typeof import('./src/components/layout/Layout2.vue')['default']
     Layout3: typeof import('./src/components/layout/Layout3.vue')['default']
+    Layout4: typeof import('./src/components/layout/Layout4.vue')['default']
     LayoutOne: typeof import('./src/components/layout/LayoutOne.vue')['default']
     LayoutTwo: typeof import('./src/components/layout/LayoutTwo.vue')['default']
+    Nav1: typeof import('./src/components/Nav/Nav1.vue')['default']
+    Nav2: typeof import('./src/components/Nav/Nav2.vue')['default']
+    Nav3: typeof import('./src/components/Nav/Nav3.vue')['default']
+    Nav4: typeof import('./src/components/Nav/Nav4.vue')['default']
   }
 }

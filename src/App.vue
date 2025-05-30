@@ -1,198 +1,152 @@
 <template>
-    <v-layout ref="app" class="rounded rounded-md border">
-        <v-app-bar color="surface-variant" name="app-bar">
-            <child v-slot="{print}">
-                <v-btn class="mx-auto" @click="print('app-bar')">
-                    Get data
+    <v-layout class="rounded rounded-md border">
+        <v-navigation-drawer color="suface-variant" permanent>
+        <v-select
+        v-model="location"
+        :items="location"
+        label="Location">
+        </v-select>
+        <v-menu :location="location">
+            <template v-slot:activator="{props}">
+                <v-btn color="black" v-bind="props">
+                Dropdown
                 </v-btn>
-            </child>
+
+                <v-list>
+                    <v-list-item
+                    v-for="(item, index) in items"
+                    :key="index"
+                    :value="index">
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                </v-list>
+            </template>
+        </v-menu>
+        </v-navigation-drawer>
+        <v-app-bar
+        :order="order"
+        color="grey-lighten-2"
+        title="Fri"
+        flat>
+        <template v-slot:append>
+            <v-switch
+            v-model="order"
+            class="me-2"
+            false-value="0"
+            label="Toggle order"
+            true-value="-1"
+            hide-details
+            inset>
+            </v-switch>
+        </template>
         </v-app-bar>
 
-        <v-navigation-drawer
-        color="surface-light" name="drawer" permanent
-        >
-
-        <div class="d-flex justify-center align-center h-100">
-            <child v-slot="{print}">
-                <v-btn variant="text" @click="print('drawer')">
-                    Get data
-                </v-btn>
-            </child>
-        </div>
-
-        </v-navigation-drawer>
-        <v-main class="d-flex align-center justify-center">
+        <v-main class="d-flex">
             <v-container>
-<v-row align="center" justify="center" >
-    <v-col cols="12" md="4" sm="6">
-<div class="position-absolute d-flex align-center justify-center">
-    <v-btn color="deep-purple-darken-2" size="x-large" @click="dialog = !dialog">
-        팝업창 열기
-    </v-btn>
-</div>        
-    </v-col>
-    <v-col cols="12" md="4" sm="6">
+                <v-row class="text-center">
+                    <v-col cols="auto" sm="auto">
+                        <h1>v-divider</h1>
+                        <v-divider></v-divider>
+                        <h2>vertical</h2>
+                        <v-divider vertical class="border-opacity-100"></v-divider>
+                    </v-col>
 
-    </v-col>
-    <v-col cols="12" md="4" sm="6">
-<v-card
-class="px-2 mx-auto"
-max-width="900"
-rounded="lg"
-text="How .... Vuetify?"
-theme="dark"
-title="SURVEY"
-variant="flat"
->
-<template v-slot:append>
-    <div class="me-n2">
-        <v-btn
-        density="comfortable"
-        icon="$close"
-        variant="plain"
-        ></v-btn>
-    </div>
-</template>
+                    <v-col cols="auto" sm="auto">
+                        <h1>List</h1>
+                        <v-card class="mx-auto">
+                            <v-list density="compact">
+                                <v-list-subheader>REPORTs</v-list-subheader>
+                                <v-list-item
+                                v-for="(item, i) in items"
+                                :key="i"
+                                :value="item"
+                                color="primary">
+                                <template v-slot:prepend>
+                                    <v-icon :icon="item.icon"></v-icon>
+                                </template>
+                                <v-list-item-title v-text="item.text"></v-list-item-title>
+                                </v-list-item>
+                            </v-list>
+                        </v-card>
+                    </v-col>
+                    
+                    <v-col cols="auto" sm="auto">
+                        <h1>List2</h1>
+                        <v-card class="mx-auto" max-width="auto">
+                            <v-toolbar color="black">
+                                <v-btn icon="mdi-menu" variant="text"></v-btn>
+                                <v-toolbar-title>Inbox</v-toolbar-title>
+                                <v-btn icon="mdi-magnify" variant="text"></v-btn>
+                            </v-toolbar>
 
-<v-item-group
-v-model="model"
-class="d-flex justify-sm-space-between px-6 pt-2 pb-6"
->
-<v-item v-for="n in 5" :key="n">
-    <template v-slot:default="{toggle}">
-        <v-btn
-        :active="model != null && model + 1 >= n"
-        :icon="`mdi-numeric-${n}`"
-        height="40"
-        variant="text"
-        width="40"
-        border
-        @click="toggle"
-        >
-        </v-btn>
-    </template>
-</v-item>
-
-</v-item-group>
-</v-card>
-    </v-col>
-</v-row>
-<v-row align="center" justify="center" >
-<v-col cols="auto">
-    <v-btn density="compact" icon="mdi-plus"></v-btn>
-</v-col>
-<v-col cols="auto">
-    <v-btn density="comfortable" icon="$vuetify"></v-btn>
-</v-col>
-<v-col cols="auto">
-    <v-btn density="default" icon="mdi-open-in-new"></v-btn>
-</v-col>
-<v-col cols="auto">
-    <v-btn icon="mdi-account" size="x-small"></v-btn>
-</v-col>
-<v-col cols="auto">
-    <v-btn icon="$vuetify"></v-btn>
-</v-col>
-<v-col cols="auto">
-    <v-btn icon="mdi-open-in-new" size="large"></v-btn>
-</v-col>
-<v-col cols="auto">
-    <v-btn icon="mdi-calendar" size="x-large"></v-btn>
-</v-col>
-<v-col cols="auto"></v-col>
-</v-row>
-<v-row align="center" justify="center" >
-    <v-col>
-<h1>Rounded Button</h1>
-    </v-col>
-</v-row>
-<v-row align="center" justify="center" >
-<v-col cols="12" md="4" sm="6">
-    <v-btn rounded="0" size="x-large" block>Rounded 0</v-btn>
-</v-col>
-<v-col cols="12" md="4" sm="6">
-    <v-btn rounded="xs" size="x-large" block>Rounded xs</v-btn>
-</v-col>
-<v-col cols="12" md="4" sm="6">
-   <v-btn rounded="sm" size="x-large" block>Rounded sm</v-btn>
-</v-col>
-<v-col cols="12" md="4" sm="6">
-<v-btn rounded="x-large" size="x-large" block>Rounded x-large</v-btn>
-</v-col>
-<v-col cols="12" md="4" sm="6">
-<v-btn rounded="lg" size="x-large" block>Rounded lg</v-btn>
-</v-col>
-<v-col cols="12" md="4" sm="6">
-<v-btn rounded="xl" size="x-large" block>Rounded xl</v-btn>
-</v-col>
-</v-row>
-<v-row align="center" justify="center" >
-    <v-col>
-        <v-btn block>Block Button</v-btn>
-    </v-col>
-</v-row>
-<v-row align="center" justify="center" >
-        <v-col cols="auto" class="mt100">
-<v-btn size="x-small">x-small</v-btn>
-        </v-col>
-        <v-col cols="auto" class="mt100">
-<v-btn size="small">small</v-btn>            
-        </v-col>
-        <v-col cols="auto" class="mt100">
-<v-btn size="auto">auto</v-btn>            
-        </v-col>
-        <v-col cols="auto" class="mt100">
-<v-btn size="large">large</v-btn>            
-        </v-col>
-        <v-col cols="auto" class="mt100">
-<v-btn size="x-large">x-large</v-btn>             
-        </v-col>
-    </v-row>
-
-                <v-sheet
-                border="dashed md" color="suface-light" rounded="lg" width="100%"
-                >
-                <h1 class="my-5 text-secondary">Buttons</h1>
-<p><v-btn>기본형</v-btn><v-btn prepend-icon="$vuetify" class="mx-3">btn</v-btn>
-<v-btn prepend-icon="$vuetify" append-icon="$vuetify">btn</v-btn>
-<v-btn prepend-icon="$vuetify" stacked class="mx-3">btn</v-btn>
-</p>
-                </v-sheet>
+                            <v-list
+                            :items="itemss"
+                            lines="three"
+                            item-props>
+                                <template v-slot:subtitle="{subtitle}">
+                                    <div v-html="subtitle"></div>
+                                </template>
+                            </v-list>
+                        </v-card>
+                    </v-col>
+                    
+                </v-row>
             </v-container>
         </v-main>
-
-        <v-footer color="surface-light" name="footer" app>
-                <v-btn 
-                class="mx-auto"
-                text="Get data"
-                variant="text"
-                 @click="print('footer')">
-                </v-btn>
-        </v-footer>
     </v-layout>
 </template>
 
-<script setup>/*얘는 vue3에서 컴포지션 API를 간결하게 사용할수 있도록 해주는 
- SFC문법 입니다
-*/
-import {useLayout} from 'vuetify'
+<script setup>
+import {shallowRef} from 'vue'
+import {ref} from 'vue'
 
-const Child = {
-    setup (props, ctx){//setup함수의 매개변수 입니다
-        const {getLayoutItem} = useLayout()
+const order = shallowRef(0)
 
-        function print(key){//키 값을 받아서 아이템의 정보를 json 으로 경고창 출력
-            alert(JSON.stringify(getLayoutItem(key), null, 2))
-        }
 
-        return () => ctx.slots.default({print})
+const items = [
+    {text: 'Real-Time', icon:'mdi-clock'},
+    {text: 'Audience', icon:'mdi-account'},
+    {text: 'Conversions', icon:'mdi-flag'},
+    {title: 'Click Me', icon:'mdi-flag'},
+    {title: 'Click Me 2'},
+]
+
+const location = ref('end')
+const locations = [
+    'top','bottom','start','end','center',
+]
+
+const itemss = [
+    { type: 'subheader', title: 'Today' },
+    {
+      prependAvatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+      title: 'Brunch this weekend?',
+      subtitle: `<span class="text-primary">Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
     },
-}
-</script>
+    { type: 'divider', inset: true },
+    {
+      prependAvatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
+      title: 'Summer BBQ',
+      subtitle: `<span class="text-primary">to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend.`,
+    },
+    { type: 'divider', inset: true },
+    {
+      prependAvatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+      title: 'Oui oui',
+      subtitle: '<span class="text-primary">Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?',
+    },
+    { type: 'divider', inset: true },
+    {
+      prependAvatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
+      title: 'Birthday gift',
+      subtitle: '<span class="text-primary">Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?',
+    },
+    { type: 'divider', inset: true },
+    {
+      prependAvatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
+      title: 'Recipe to try',
+      subtitle: '<span class="text-primary">Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.',
+    },
+  ]
 
-<style>
-.mt100{
-margin-top:50px;
-margin-bottom:50px;
-}
-</style>
+</script>
