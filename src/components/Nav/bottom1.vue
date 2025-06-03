@@ -1,13 +1,48 @@
 <template>
+<div class="mt100"></div>
+
+<v-layout class="border rounded">
+    <div class="mx-auto mt100">
+        <v-btn
+        color="deep-purple" 
+        variant="outlined"
+        @click="active = !active"> <!--토글기능-->
+            toggle Navigation
+        </v-btn>
+        <div class="mb-5"></div>
+    </div>
+
+    <v-bottom-navigation
+    :active="active"
+    color="indigo">
+        <v-btn>
+            <v-icon>mdi-history</v-icon>
+                Recents
+        </v-btn>
+
+        <v-btn>
+            <v-icon>mdi-heart</v-icon>
+                favorites
+        </v-btn>
+
+        <v-btn>
+            <v-icon>mdi-map-marker</v-icon>
+                Nearby
+        </v-btn>
+    </v-bottom-navigation>
+</v-layout>
+
+
 <v-container>
     <v-row>
         <v-col>
         
         </v-col>
     </v-row>
-</v-container>
+</v-container> 
 
-<div class="my-7"></div>
+
+<div class="my-5"></div>
 
 <v-layout class="overflow-visible">
     <v-bottom-navigation
@@ -51,9 +86,11 @@
 </template>
 
 <script setup>
-import { computed, ref} from 'vue';
+import {computed, ref} from 'vue';
 
-const value = ref(1)
+const active = ref(true) // 팝업창 활성화&비활성화
+
+const value = ref(1) // value는 이제 반응형 데이터
 const color = computed(() => {
     switch (value.value) {
         case 0: return 'blue-grey'

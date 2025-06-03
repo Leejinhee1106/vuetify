@@ -12,6 +12,8 @@ declare module 'vue' {
     Bread: typeof import('./src/components/coms/Bread.vue')['default']
     Button: typeof import('./src/components/coms/Button.vue')['default']
     Expan: typeof import('./src/components/coms/Expan.vue')['default']
+    Fbutton: typeof import('./src/components/coms/Fbutton.vue')['default']
+    Footer: typeof import('./src/components/coms/Footer.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     HelloWorld: typeof import('./src/components/coms/HelloWorld.vue')['default']
     Home: typeof import('./src/components/coms/Home.vue')['default']
@@ -28,6 +30,7 @@ declare module 'vue' {
     Nav5: typeof import('./src/components/Nav/Nav5.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Tabs: typeof import('./src/components/coms/Tabs.vue')['default']
     Tooltip: typeof import('./src/components/coms/Tooltip.vue')['default']
     Tooltips: typeof import('./src/components/coms/Tooltips.vue')['default']
   }

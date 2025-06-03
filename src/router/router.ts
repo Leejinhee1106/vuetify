@@ -7,10 +7,13 @@ import Nav3 from '../components/nav/Nav3.vue';
 import Nav4 from '../components/nav/Nav4.vue';
 import Nav5 from '../components/nav/Nav5.vue';
 import Bottom1 from '../components/nav/Bottom1.vue';
+import Footer from '../components/coms/Footer.vue';
 import Button from '../components/coms/Button.vue';
 import Expan from '../components/coms/Expan.vue';
 import Tooltip from '../components/coms/Tooltip.vue';
 import Bread from '../components/coms/Bread.vue';
+import Fbutton from '../components/coms/Fbutton.vue';
+import Tabs from '../components/coms/Tabs.vue';
 
 const routes = [
    { path: '/', redirect: '/home' }, // 기본 리디렉션
@@ -21,10 +24,13 @@ const routes = [
   { path: '/nav4', component: Nav4 },
   { path: '/nav5', component: Nav5 },
   { path: '/bottom1', component: Bottom1 }, 
+  { path: '/footer', component: Footer }, 
   { path: '/button', component: Button },
   { path: '/expan', component: Expan },
   { path: '/tooltip', component: Tooltip },
   { path: '/breadcrumbs', component: Bread },
+  { path: '/fbutton', component: Fbutton },
+  { path: '/tabs', component: Tabs },
 ]
 
 const router = createRouter({
