@@ -8,9 +8,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Button: typeof import('./src/components/Button.vue')['default']
-    Expan: typeof import('./src/components/Expan.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Bottom1: typeof import('./src/components/Nav/bottom1.vue')['default']
+    Bread: typeof import('./src/components/coms/Bread.vue')['default']
+    Button: typeof import('./src/components/coms/Button.vue')['default']
+    Expan: typeof import('./src/components/coms/Expan.vue')['default']
+    Header: typeof import('./src/components/Header.vue')['default']
+    HelloWorld: typeof import('./src/components/coms/HelloWorld.vue')['default']
+    Home: typeof import('./src/components/coms/Home.vue')['default']
     Layout1: typeof import('./src/components/layout/Layout1.vue')['default']
     Layout2: typeof import('./src/components/layout/Layout2.vue')['default']
     Layout3: typeof import('./src/components/layout/Layout3.vue')['default']
@@ -21,5 +25,10 @@ declare module 'vue' {
     Nav2: typeof import('./src/components/Nav/Nav2.vue')['default']
     Nav3: typeof import('./src/components/Nav/Nav3.vue')['default']
     Nav4: typeof import('./src/components/Nav/Nav4.vue')['default']
+    Nav5: typeof import('./src/components/Nav/Nav5.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    Tooltip: typeof import('./src/components/coms/Tooltip.vue')['default']
+    Tooltips: typeof import('./src/components/coms/Tooltips.vue')['default']
   }
 }
