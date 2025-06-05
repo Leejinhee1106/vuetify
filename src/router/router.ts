@@ -14,6 +14,8 @@ import Tooltip from '../components/coms/Tooltip.vue';
 import Bread from '../components/coms/Bread.vue';
 import Fbutton from '../components/coms/Fbutton.vue';
 import Tabs from '../components/coms/Tabs.vue';
+import Page from '../components/coms/Page.vue';
+import Dir from '../components/ref/Dir.vue';
 
 const routes = [
    { path: '/', redirect: '/home' }, // 기본 리디렉션
@@ -31,6 +33,8 @@ const routes = [
   { path: '/breadcrumbs', component: Bread },
   { path: '/fbutton', component: Fbutton },
   { path: '/tabs', component: Tabs },
+  { path: '/page', component: Page },
+  { path: '/dir', component: Dir },
 ]
 
 const router = createRouter({
