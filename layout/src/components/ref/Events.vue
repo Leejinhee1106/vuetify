@@ -19,13 +19,20 @@
             </v-col>
 
             <v-col cols="12" md="4">
-            
+            <h2>Count Input Events</h2>
+            <input type="text" v-on:input="inputCount++" placeholder="Start Writing..">
+            <p>{{ inputCount }} input events occurred</p>
             </v-col>
 
             <v-col cols="12" md="4">
-            
+                <div class="color" 
+                v-on:mousemove="colorVal = Math.floor(Math.random() * 360)"
+                v-bind:style="{ backgroundColor: 'hsl(' + colorVal + ', 60%, 60%)' }">
+                </div>
+                <p>background-color : hsl(<strong>{{ colorVal }}</strong>)</p>
             </v-col>
         </v-row>
+        <hr class="my-4"/>
     </v-container>
 </template>
 
@@ -35,7 +42,8 @@ export default {
         return{
             count:0,
             lightOn: false,
-
+            inputCount: 0,
+            colorVal:50,
         }
     }
 }
@@ -60,6 +68,10 @@ export default {
     height: 80%;
     border-radius: 50%;
     background: yellow;
+}
+.color{
+    width:200px;
+    height: 80px;
 }
 </style>
 
