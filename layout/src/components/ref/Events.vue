@@ -61,4 +61,8 @@ export default {
     border-radius: 50%;
     background: yellow;
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 285565c773685b640a9d4d418a4c36922a5f9e25
