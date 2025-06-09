@@ -34,7 +34,8 @@ export default {
     data(){
         return{
             count:0,
-            lightOn: false
+            lightOn: false,
+
         }
     }
 }
