@@ -134,6 +134,8 @@ const manyFood = ref([
 ])
 const doesRotate = ref(false)
 
+
+
 </script>
 
 <style>
