@@ -11,6 +11,7 @@ declare module 'vue' {
     Bottom1: typeof import('./src/components/Nav/bottom1.vue')['default']
     Bread: typeof import('./src/components/coms/Bread.vue')['default']
     Button: typeof import('./src/components/coms/Button.vue')['default']
+    Comp: typeof import('./src/components/ref/Comp.vue')['default']
     Dir: typeof import('./src/components/ref/Dir.vue')['default']
     Events: typeof import('./src/components/ref/Events.vue')['default']
     Expan: typeof import('./src/components/coms/Expan.vue')['default']
@@ -25,6 +26,8 @@ declare module 'vue' {
     Layout4: typeof import('./src/components/layout/Layout4.vue')['default']
     LayoutOne: typeof import('./src/components/layout/LayoutOne.vue')['default']
     LayoutTwo: typeof import('./src/components/layout/LayoutTwo.vue')['default']
+    Met: typeof import('./src/components/ref/Met.vue')['default']
+    MEt: typeof import('./src/components/ref/MEt.vue')['default']
     Nav1: typeof import('./src/components/Nav/Nav1.vue')['default']
     Nav2: typeof import('./src/components/Nav/Nav2.vue')['default']
     Nav3: typeof import('./src/components/Nav/Nav3.vue')['default']
@@ -37,5 +40,7 @@ declare module 'vue' {
     Taps: typeof import('./src/components/coms/Taps.vue')['default']
     Tooltip: typeof import('./src/components/coms/Tooltip.vue')['default']
     Tooltips: typeof import('./src/components/coms/Tooltips.vue')['default']
+    Vmodel: typeof import('./src/components/ref/Vmodel.vue')['default']
+    Watc: typeof import('./src/components/ref/Watc.vue')['default']
   }
 }

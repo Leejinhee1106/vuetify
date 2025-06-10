@@ -1,23 +1,4 @@
 <template>
-<!-- <v-app-bar app>
-            <v-toolbar-title>Vuetify Ref</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-btn text :to="'/home'" >Home</v-btn>
-            <v-btn text :to="'/nav1'" >*네</v-btn>
-            <v-btn text :to="'/nav2'">비</v-btn>
-            <v-btn text :to="'/nav3'" >게</v-btn>
-            <v-btn text :to="'/nav4'" >이</v-btn>
-            <v-btn text :to="'/nav5'" >션*</v-btn>
-            <v-btn text :to="'/tabs'">Tabs</v-btn>
-            <v-btn text :to="'/button'" >button</v-btn>
-            <v-btn text :to="'/fbutton'" >Floating Btn</v-btn>
-            <v-btn text :to="'/expan'" >Expan</v-btn>
-            <v-btn text :to="'/tooltip'">Tooltip</v-btn>
-            <v-btn text :to="'/breadcrumbs'">Crumbles</v-btn> 
-            <v-btn text :to="'/bottom1'" >B_nav1</v-btn>
-            <v-btn text :to="'/footer'" >Footer</v-btn>          
-</v-app-bar> -->
-
         <v-app-bar app>
         <v-toolbar-title>Vuetify Ref</v-toolbar-title>
         <v-spacer></v-spacer>
@@ -45,7 +26,7 @@
         <v-menu>
         <template #activator="{ props }">
                 <v-btn v-bind="props" text>
-                Coms
+                vuetify3
                 <v-icon end>mdi-menu-down</v-icon>
                 </v-btn>
         </template>
@@ -57,24 +38,30 @@
                 <v-list-item :to="'/tooltip'" title="Tooltip"/>
                 <v-list-item :to="'/breadcrumbs'" title="Crumbles"/>
                 <v-list-item :to="'/page'" title="Page"/>
+                <v-list-item :to="'/footer'" title="Footer"/>
         </v-list>
         </v-menu>
 
          <v-menu>
         <template #activator="{ props }">
                 <v-btn v-bind="props" text>
-                Ref
+                vue
                 <v-icon end>mdi-menu-down</v-icon>
                 </v-btn>
         </template>
         <v-list>
                 <v-list-item :to="'/dir'" title="Directive"/>
                 <v-list-item :to="'/events'" title="Event"/>
+                <v-list-item :to="'/met'" title="Method"/>
+                <v-list-item :to="'/comp'" title="Computed"/>
+                <v-list-item :to="'/vmodel'" title="V-model"/>
+                <v-list-item :to="'/Watc'" title="Watcher"/>
         </v-list>
         </v-menu>
 
-        <!-- 나머지 버튼들 -->
+        <!-- 드롭다운 아닌 버튼 
         <v-btn text :to="'/footer'">Footer</v-btn>
+        -->
         </v-app-bar>
 
 
