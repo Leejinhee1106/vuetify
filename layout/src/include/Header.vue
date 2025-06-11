@@ -26,7 +26,7 @@
         <v-menu>
         <template #activator="{ props }">
                 <v-btn v-bind="props" text>
-                vuetify3
+                Vuetify3
                 <v-icon end>mdi-menu-down</v-icon>
                 </v-btn>
         </template>
@@ -39,6 +39,41 @@
                 <v-list-item :to="'/breadcrumbs'" title="Crumbles"/>
                 <v-list-item :to="'/page'" title="Page"/>
                 <v-list-item :to="'/footer'" title="Footer"/>
+        </v-list>
+        </v-menu>
+
+        <v-menu>
+        <template #activator="{ props }">
+                <v-btn v-bind="props" text>
+                Vuetify3 Inputs & Controls
+                <v-icon end>mdi-menu-down</v-icon>
+                </v-btn>
+        </template>
+        <v-list>
+                <v-list-item :to="'/otpin'" title="OTP input"/>
+                <v-list-item :to="'/radiobtn'" title="Radio Btn"/>
+                <v-list-item :to="'/rs'" title="Range Slider"/>
+                <v-list-item :to="'/swit'" title="Switch"/>
+                <v-list-item :to="'/tf'" title="TextField"/>
+                <v-list-item :to="'/ta'" title="TextAria"/>
+        </v-list>
+        </v-menu>
+
+         <v-menu>
+        <template #activator="{ props }">
+                <v-btn v-bind="props" text>
+                Vuetify3 Select
+                <v-icon end>mdi-menu-down</v-icon>
+                </v-btn>
+        </template>
+        <v-list>
+                <v-list-item :to="'/tbtn'" title="Toggle Button" />
+                <v-list-item :to="'/cslide'" title="Carousel Slide" />
+                <v-list-item :to="'/cg'" title="Chip Group" />
+                <v-list-item :to="'/ig'" title="Item Group" />
+                <v-list-item :to="'/sgr'" title="Slide Group" />
+                <v-list-item :to="'/ste'" title="Stepper" />
+                <v-list-item :to="'/win'" title="Windows" />
         </v-list>
         </v-menu>
 

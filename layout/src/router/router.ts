@@ -22,6 +22,21 @@ import Comp from '../components/ref/Comp.vue';
 import Vmodel from '../components/ref/Vmodel.vue';
 import Watc from '../components/ref/Watc.vue';
 
+import Otpin from '../components/coms/Otpin.vue';
+import Radiobtn from '../components/coms/Radiobtn.vue';
+import Rs from '../components/coms/Rs.vue';
+import Swit from '../components/coms/Swit.vue';
+import Ta from '../components/coms/Ta.vue';
+import Tf from '../components/coms/Tf.vue';
+
+import Tbtn from '../components/coms/Tbtn.vue';
+import Cslide from '../components/coms/Cslide.vue';
+import Cg from '../components/coms/Cg.vue';
+import Ig from '../components/coms/Ig.vue';
+import Sgr from '../components/coms/Sgr.vue';
+import Ste from '../components/coms/Ste.vue';
+import Win from '../components/coms/Win.vue';
+
 const routes = [
    { path: '/', redirect: '/home' }, // 기본 리디렉션
   { path: '/home', component: Home },
@@ -45,6 +60,23 @@ const routes = [
   { path: '/comp', component: Comp},
   { path: '/vmodel', component: Vmodel},
   { path: '/watc', component: Watc},
+
+  { path: '/otpin', component: Otpin},
+  { path: '/radiobtn', component: Radiobtn},
+  { path: '/rs', component: Rs},
+  { path: '/swit', component: Swit},
+  { path: '/ta', component: Ta},
+  { path: '/tf', component: Tf},
+
+  { path: '/tbtn', component: Tbtn},
+  { path: '/cslide', component: Cslide},
+  { path: '/cg', component: Cg},
+  { path: '/ig', component: Ig},
+  { path: '/sgr', component: Sgr},
+  { path: '/ste', component: Ste},
+  { path: '/win', component: Win},
+
+
 ]
 
 const router = createRouter({
