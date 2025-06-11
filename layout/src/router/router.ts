@@ -22,6 +22,7 @@ import Comp from '../components/ref/Comp.vue';
 import Vmodel from '../components/ref/Vmodel.vue';
 import Watc from '../components/ref/Watc.vue';
 
+// V-Inputs & Controls
 import Otpin from '../components/coms/Otpin.vue';
 import Radiobtn from '../components/coms/Radiobtn.vue';
 import Rs from '../components/coms/Rs.vue';
@@ -29,6 +30,7 @@ import Swit from '../components/coms/Swit.vue';
 import Ta from '../components/coms/Ta.vue';
 import Tf from '../components/coms/Tf.vue';
 
+// V-Select
 import Tbtn from '../components/coms/Tbtn.vue';
 import Cslide from '../components/coms/Cslide.vue';
 import Cg from '../components/coms/Cg.vue';
@@ -36,6 +38,27 @@ import Ig from '../components/coms/Ig.vue';
 import Sgr from '../components/coms/Sgr.vue';
 import Ste from '../components/coms/Ste.vue';
 import Win from '../components/coms/Win.vue';
+
+// V-feedback
+import Alerts from '../components/coms/Alerts.vue'
+import Badges from '../components/coms/Badges.vue'
+import Banner from '../components/coms/Banner.vue'
+import Empty from '../components/coms/Empty.vue'
+import Hover from '../components/coms/Hover.vue'
+import Pc from '../components/coms/Pc.vue'
+import Pl from '../components/coms/Pl.vue'
+import Ratings from '../components/coms/Ratings.vue'
+import Sl from '../components/coms/Sl.vue'
+import Snacks from '../components/coms/Snacks.vue'
+import Snackq from '../components/coms/Snackq.vue'
+import Tl from '../components/coms/Tl.vue'
+
+// V-img*icon
+import Ar from '../components/coms/As.vue'
+import Ava from '../components/coms/Ava.vue'
+import Ic from '../components/coms/Ic.vue'
+import Im from '../components/coms/Im.vue'
+import Para from '../components/coms/Para.vue'
 
 const routes = [
    { path: '/', redirect: '/home' }, // 기본 리디렉션
@@ -76,7 +99,24 @@ const routes = [
   { path: '/ste', component: Ste},
   { path: '/win', component: Win},
 
+  { path: '/alerts', component: Alerts },
+  { path: '/badges', component: Badges },
+  { path: '/banner', component: Banner },
+  { path: '/empty', component: Empty },
+  { path: '/hover', component: Hover },
+  { path: '/pc', component: Pc },
+  { path: '/pl', component: Pl },
+  { path: '/ratings', component: Ratings },
+  { path: '/sl', component: Sl },
+  { path: '/snacks', component: Snacks },
+  { path: '/snackq', component: Snackq },
+  { path: '/tl', component: Tl },
 
+  { path: '/ar', component: Ar },
+  { path: '/ava', component: Ava },
+  { path: '/ic', component: Ic },
+  { path: '/im', component: Im },
+  { path: '/para', component: Para },
 ]
 
 const router = createRouter({

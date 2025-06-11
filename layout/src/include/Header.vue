@@ -26,6 +26,23 @@
         <v-menu>
         <template #activator="{ props }">
                 <v-btn v-bind="props" text>
+                Vue
+                <v-icon end>mdi-menu-down</v-icon>
+                </v-btn>
+        </template>
+        <v-list>
+                <v-list-item :to="'/dir'" title="Directive"/>
+                <v-list-item :to="'/events'" title="Event"/>
+                <v-list-item :to="'/met'" title="Method"/>
+                <v-list-item :to="'/comp'" title="Computed"/>
+                <v-list-item :to="'/vmodel'" title="V-model"/>
+                <v-list-item :to="'/Watc'" title="Watcher"/>
+        </v-list>
+        </v-menu>
+
+        <v-menu>
+        <template #activator="{ props }">
+                <v-btn v-bind="props" text>
                 Vuetify3
                 <v-icon end>mdi-menu-down</v-icon>
                 </v-btn>
@@ -45,7 +62,7 @@
         <v-menu>
         <template #activator="{ props }">
                 <v-btn v-bind="props" text>
-                Vuetify3 Inputs & Controls
+                V-Inputs & Controls
                 <v-icon end>mdi-menu-down</v-icon>
                 </v-btn>
         </template>
@@ -62,7 +79,7 @@
          <v-menu>
         <template #activator="{ props }">
                 <v-btn v-bind="props" text>
-                Vuetify3 Select
+                V-Select
                 <v-icon end>mdi-menu-down</v-icon>
                 </v-btn>
         </template>
@@ -77,22 +94,47 @@
         </v-list>
         </v-menu>
 
-         <v-menu>
+        <v-menu>
         <template #activator="{ props }">
                 <v-btn v-bind="props" text>
-                vue
+                V-Feedback
                 <v-icon end>mdi-menu-down</v-icon>
                 </v-btn>
         </template>
         <v-list>
-                <v-list-item :to="'/dir'" title="Directive"/>
-                <v-list-item :to="'/events'" title="Event"/>
-                <v-list-item :to="'/met'" title="Method"/>
-                <v-list-item :to="'/comp'" title="Computed"/>
-                <v-list-item :to="'/vmodel'" title="V-model"/>
-                <v-list-item :to="'/Watc'" title="Watcher"/>
+                <v-list-item :to="'/alerts'" title="Alerts" />
+                <v-list-item :to="'/badges'" title="Badges" />
+                <v-list-item :to="'/banner'" title="Banner" />
+                <v-list-item :to="'/empty'" title="Empty" />
+                <v-list-item :to="'/hover'" title="Hover" />
+                <v-list-item :to="'/pc'" title="ProgressCircular" />
+                <v-list-item :to="'/pl'" title="ProgressLinear" />
+                <v-list-item :to="'/ratings'" title="Ratings" />
+                <v-list-item :to="'/sl'" title="SkeletonLoaders" />
+                <v-list-item :to="'/snacks'" title="Snackbars" />
+                <v-list-item :to="'/snackq'" title="SnackbarQueue" />
+                <v-list-item :to="'/tl'" title="Timeline" />
+
         </v-list>
         </v-menu>
+
+        <v-menu>
+        <template #activator="{ props }">
+                <v-btn v-bind="props" text>
+                V-img & icon
+                <v-icon end>mdi-menu-down</v-icon>
+                </v-btn>
+        </template>
+       <v-list>
+                <v-list-item :to="'/ar'" title="Aspect Ratio" />
+                <v-list-item :to="'/ava'" title="Avatar" />
+                <v-list-item :to="'/ic'" title="Icon" />
+                <v-list-item :to="'/im'" title="Image" />
+                <v-list-item :to="'/para'" title="Paradox" />
+        </v-list>
+        </v-menu>
+
+       
 
         <!-- 드롭다운 아닌 버튼 
         <v-btn text :to="'/footer'">Footer</v-btn>
