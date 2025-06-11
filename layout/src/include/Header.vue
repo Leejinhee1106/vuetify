@@ -121,7 +121,7 @@
         <v-menu>
         <template #activator="{ props }">
                 <v-btn v-bind="props" text>
-                V-img & icon
+                V-img / icon
                 <v-icon end>mdi-menu-down</v-icon>
                 </v-btn>
         </template>
@@ -130,7 +130,7 @@
                 <v-list-item :to="'/ava'" title="Avatar" />
                 <v-list-item :to="'/ic'" title="Icon" />
                 <v-list-item :to="'/im'" title="Image" />
-                <v-list-item :to="'/para'" title="Paradox" />
+                <v-list-item :to="'/para'" title="Parallax" />
         </v-list>
         </v-menu>
 

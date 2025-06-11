@@ -84,6 +84,7 @@ const routes = [
   { path: '/vmodel', component: Vmodel},
   { path: '/watc', component: Watc},
 
+// V-Inputs & Controls
   { path: '/otpin', component: Otpin},
   { path: '/radiobtn', component: Radiobtn},
   { path: '/rs', component: Rs},
@@ -91,6 +92,7 @@ const routes = [
   { path: '/ta', component: Ta},
   { path: '/tf', component: Tf},
 
+  // V-Select
   { path: '/tbtn', component: Tbtn},
   { path: '/cslide', component: Cslide},
   { path: '/cg', component: Cg},
@@ -99,6 +101,7 @@ const routes = [
   { path: '/ste', component: Ste},
   { path: '/win', component: Win},
 
+  // V-feedback
   { path: '/alerts', component: Alerts },
   { path: '/badges', component: Badges },
   { path: '/banner', component: Banner },
@@ -111,7 +114,8 @@ const routes = [
   { path: '/snacks', component: Snacks },
   { path: '/snackq', component: Snackq },
   { path: '/tl', component: Tl },
-
+  
+// V-img*icon
   { path: '/ar', component: Ar },
   { path: '/ava', component: Ava },
   { path: '/ic', component: Ic },
