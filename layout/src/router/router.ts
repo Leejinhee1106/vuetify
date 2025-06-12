@@ -23,7 +23,14 @@ import Vmodel from '../components/ref/Vmodel.vue';
 import Watc from '../components/ref/Watc.vue';
 
 // V-Inputs & Controls
-import Otpin from '../components/coms/Otpin.vue';
+import Auto from '../components/coms/Auto.vue';
+import Check from '../components/coms/Check.vue';
+import Combo from '../components/coms/Combo.vue';
+import File from '../components/coms/File.vue';
+import Form from '../components/coms/Form.vue';
+import Custom from '../components/coms/Custom.vue';
+import Numbs from '../components/coms/Numbs.vue';
+import Otp from '../components/coms/Otp.vue';
 import Radiobtn from '../components/coms/Radiobtn.vue';
 import Rs from '../components/coms/Rs.vue';
 import Swit from '../components/coms/Swit.vue';
@@ -85,7 +92,14 @@ const routes = [
   { path: '/watc', component: Watc},
 
 // V-Inputs & Controls
-  { path: '/otpin', component: Otpin},
+  { path: '/auto', component: Auto},
+  { path: '/check', component: Check},
+  { path: '/combo', component: Combo},
+  { path: '/file', component: File},
+  { path: '/form', component: Form},
+  { path: '/custom', component: Custom},
+  { path: '/numbs', component: Numbs},
+  { path: '/otp', component: Otp},
   { path: '/radiobtn', component: Radiobtn},
   { path: '/rs', component: Rs},
   { path: '/swit', component: Swit},

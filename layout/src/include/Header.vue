@@ -67,7 +67,14 @@
                 </v-btn>
         </template>
         <v-list>
-                <v-list-item :to="'/otpin'" title="OTP input"/>
+                <v-list-item :to="'/auto'" title="AutoComplete"/>
+                <v-list-item :to="'/check'" title="Checkbox"/>
+                <v-list-item :to="'/combo'" title="Combobox"/>
+                <v-list-item :to="'/file'" title="File"/>
+                <v-list-item :to="'/form'" title="Form"/>
+                <v-list-item :to="'/custom'" title="Custom"/>
+                <v-list-item :to="'/numbs'" title="Numbs"/>
+                <v-list-item :to="'/otp'" title="Otp input"/>
                 <v-list-item :to="'/radiobtn'" title="Radio Btn"/>
                 <v-list-item :to="'/rs'" title="Range Slider"/>
                 <v-list-item :to="'/swit'" title="Switch"/>
